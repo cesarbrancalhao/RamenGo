@@ -7,9 +7,8 @@ import (
 )
 
 func StartRouter() {
-
+	
 	router := gin.Default()
 	router.GET("/broths", controller.GetBroth)
-
 	router.Run("localhost:8080")
 }
