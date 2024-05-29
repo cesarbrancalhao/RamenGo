@@ -1,20 +1,8 @@
 package main
 
 import (
-	"api/router"
-	"log"
-
-	"github.com/joho/godotenv"
+	router "api/routers"
 )
-
-func init() {
-	
-	err := godotenv.Load()
-
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-}
 
 func main () {
 
