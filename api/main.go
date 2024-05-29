@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"api/router"
+)
 
 func main () {
-	fmt.Println("hello world")
+	
+	router.StartRouter()
 }
