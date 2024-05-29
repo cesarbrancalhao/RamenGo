@@ -14,6 +14,7 @@ func ValidateOrder() gin.HandlerFunc {
 			c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 			return
 		}
+
 		c.Next()
 	}
 }
