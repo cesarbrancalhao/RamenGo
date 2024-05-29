@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+ db:
+    image: postgres:14-alpine
+    ports:
+      - 4000:4000
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ramengo
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+
+# docker compose up -d
+# docker compose exec db psql -U postgres -W ramengo   // if you want to access
+
+# docker cp ./schemas/ramengo-schema.sql <container_name>:/tmp/ramengo_schema.sql
+# docker cp ./schemas/ramengo-insert.sql <container_name>:/tmp/ramengo_insert.sql
+
+# docker compose exec db psql -U postgres -d ramengo -c "\i /tmp/ramengo_schema.sql"
+# docker compose exec db psql -U postgres -d ramengo -c "\i /tmp/ramengo_insert.sql"
