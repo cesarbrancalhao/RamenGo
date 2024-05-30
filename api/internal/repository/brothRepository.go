@@ -3,7 +3,6 @@ package repository
 import (
 	"api/internal/database"
 	"api/internal/models"
-	"errors"
 )
 
 func GetBroths() ([]models.Broth, error) {
@@ -12,12 +11,9 @@ func GetBroths() ([]models.Broth, error) {
 	return broths, err
 }
 
-// For this is a techincal test project, I wont support the below methods
-// I may expand it later on
 func CreateBroth(b *models.Broth) error {
-	// err := database.DB.Create(b).Error
-	// return err
-	return errors.New("service unavailable")
+	err := database.DB.Create(b).Error
+	return err
 }
 
 func UpdateBroth(b *models.Broth) error {
