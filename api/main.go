@@ -1,8 +1,8 @@
 package main
 
 import (
-	"api/common/initializer"
-	"api/database"
+	"api/cmd/common/initializer"
+	"api/cmd/database"
 	router "api/routers"
 )
 

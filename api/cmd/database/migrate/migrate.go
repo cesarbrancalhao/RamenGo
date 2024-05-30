@@ -1,9 +1,9 @@
 package main
 
 import (
-	"api/common/initializer"
-	"api/database"
-	"api/models"
+	"api/cmd/common/initializer"
+	"api/cmd/database"
+	"api/internal/models"
 )
 
 func init() {
