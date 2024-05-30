@@ -8,9 +8,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetBroths(c *gin.Context) {
+func GetProteins(c *gin.Context) {
 
-	res, err := repository.GetBroths()
+	res, err := repository.GetProteins()
 
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
@@ -20,18 +20,18 @@ func GetBroths(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
-// For this is a techincal test project, I wont support methods other than GET for broths and proteins
+// For this is a techincal test project, I wont support methods other than GET for Proteins and proteins
 // I may expand it later on
-func CreateBroth(c *gin.Context) {
-	var broth *models.Broth
-	if err := c.ShouldBindJSON(&broth); err != nil {
+func CreateProtein(c *gin.Context) {
+	var protein *models.Protein
+	if err := c.ShouldBindJSON(&protein); err != nil {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}	
-	err := repository.CreateBroth(broth)
+	err := repository.CreateProtein(protein)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, broth)
+	c.JSON(http.StatusOK, protein)
 }
