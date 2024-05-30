@@ -1,8 +1,12 @@
 package models
 
-import "github.com/go-playground/validator/v10"
+import (
+	"github.com/go-playground/validator/v10"
+	"gorm.io/gorm"
+)
 
 type OrderResponse struct {
+	gorm.Model
 	Id          string `json:"id" validate:"nonzero"`
 	Description string `json:"description" validate:"nonzero"`
 	Image       string `json:"image" validate:"nonzero"`
@@ -10,6 +14,6 @@ type OrderResponse struct {
 
 var validateOrderResponse = validator.New()
 
-func ValidateOrderResponse(o *OrderRequest) error {
+func ValidateOrderResponse(o *OrderResponse) error {
 	return validateOrderResponse.Struct(o)
 }

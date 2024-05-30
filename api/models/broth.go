@@ -1,8 +1,12 @@
 package models
 
-import "github.com/go-playground/validator/v10"
+import (
+	"github.com/go-playground/validator/v10"
+	"gorm.io/gorm"
+)
 
 type Broth struct {
+	gorm.Model
 	Id            string `json:"id" validate:"nonzero"`
 	ImageInactive string `json:"imageInactive" validate:"url"`
 	ImageActive   string `json:"imageActive" validate:"url"`
