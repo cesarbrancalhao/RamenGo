@@ -25,4 +25,5 @@ go.work.sum
 *.http
 *.example
 api
+.env.*
 .env

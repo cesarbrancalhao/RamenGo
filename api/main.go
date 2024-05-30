@@ -1,21 +1,16 @@
 package main
 
 import (
-	"api/database"
+	"api/common/initializer"
 	router "api/routers"
-	"log"
-
-	"github.com/joho/godotenv"
 )
 
 func init() {
-    err := godotenv.Load()
-    if err!= nil {
-        log.Fatalf("Error loading.env file")
-    }
+	initializer.LoadEnv()
+	initializer.ConnectDB()
 }
+    
 
 func main () {
-	database.InitDB()
 	router.StartRouter()
 }
