@@ -1,7 +1,7 @@
 package main
 
 import (
-	router "api/cmd/routers"
+	router "api/cmd/router"
 	"api/common/initializer"
 	"api/internal/database"
 )
