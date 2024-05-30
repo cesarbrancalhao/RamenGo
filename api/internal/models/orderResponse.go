@@ -7,7 +7,6 @@ import (
 
 type OrderResponse struct {
 	gorm.Model
-	Id          string `json:"id" validate:"nonzero"`
 	Description string `json:"description" validate:"nonzero"`
 	Image       string `json:"image" validate:"nonzero"`
 }

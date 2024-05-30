@@ -1,8 +1,8 @@
 package main
 
 import (
-	"api/cmd/common/initializer"
-	"api/cmd/database"
+	"api/common/initializer"
+	"api/internal/database"
 	"api/internal/models"
 )
 

@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"api/cmd/database"
+	"api/internal/database"
 	"api/internal/models"
 )
 

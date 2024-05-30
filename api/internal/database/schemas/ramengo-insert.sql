@@ -40,29 +40,29 @@ VALUES ('https://tech.redventures.com.br/icons/chicken/inactive.svg',
         'Three units of fried chicken, moyashi, ajitama egg and other vegetables.',
         12);
 
-INSERT INTO order_response (id, description, image)
-VALUES (1, 'Salt and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
+INSERT INTO order_response (description, image)
+VALUES ('Salt and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (2, 'Salt and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
+INSERT INTO order_response (description, image)
+VALUES ('Salt and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (3, 'Salt and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');
+INSERT INTO order_response (description, image)
+VALUES ('Salt and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (4, 'Shoyu and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
+INSERT INTO order_response (description, image)
+VALUES ('Shoyu and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (5, 'Shoyu and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
+INSERT INTO order_response (description, image)
+VALUES ('Shoyu and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (6, 'Shoyu and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');
+INSERT INTO order_response (description, image)
+VALUES ('Shoyu and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (7, 'Miso and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
+INSERT INTO order_response (description, image)
+VALUES ('Miso and Chasu Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenChasu.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (8, 'Miso and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
+INSERT INTO order_response (description, image)
+VALUES ('Miso and Yasai Vegetarian Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenYasai Vegetarian.png');
 
-INSERT INTO order_response (id, description, image)
-VALUES (9, 'Miso and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');
+INSERT INTO order_response (description, image)
+VALUES ('Miso and Karaague Ramen', 'https://tech.redventures.com.br/icons/ramen/ramenKaraague.png');

@@ -7,7 +7,6 @@ import (
 
 type Broth struct {
 	gorm.Model
-	Id            string `json:"id" validate:"nonzero"`
 	ImageInactive string `json:"imageInactive" validate:"url"`
 	ImageActive   string `json:"imageActive" validate:"url"`
 	Name          string `json:"name" validate:"nonzero"`
