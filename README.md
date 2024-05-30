@@ -19,7 +19,7 @@ After the initialization, migrate the models.
 ./scripts/migrate.sh
 ```
 
-Create a .env file and insert your x-api-key in an "API_KEY" variable.
+Create a .env file and insert your x-api-key. Check [.env.example](api/.env.example) for examples.
 
 Run the development server:
 
