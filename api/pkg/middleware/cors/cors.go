@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"api/internal/models"
 	"net/http"
 	"os"
 
@@ -16,12 +17,12 @@ func Cors(c *gin.Context) {
 
     apiKeyHeader := http.CanonicalHeaderKey("x-api-key")
     if _, ok := c.Request.Header[apiKeyHeader];!ok || len(c.Request.Header[apiKeyHeader]) == 0 {
-        c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Missing API key"})
+        c.AbortWithStatusJSON(http.StatusUnauthorized, models.ErrorResponse{Error: "Missing API key"})
         return
     }
-	
+
 	if c.Request.Header[apiKeyHeader][0] != os.Getenv("API_KEY") {
-		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Invalid API key"})
+		c.AbortWithStatusJSON(http.StatusUnauthorized, models.ErrorResponse{Error: "Invalid API key"})
 		return
 	}
 
