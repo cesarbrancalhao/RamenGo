@@ -1,23 +1,12 @@
-version: '3.9'
-
 services:
- db:
-    image: postgres:14-alpine
-    ports:
-      - 8082:8082
+  DB:
+    image: mysql:5.7
+    container_name: ramengo-mysql
+    restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: ramengo
-    volumes:
-      - ./data:/var/lib/postgresql/data
-
-
-# docker compose up -d
-# docker compose exec db psql -U postgres -W ramengo   // if you want to access
-
-# docker cp ./schemas/ramengo-schema.sql <container_name>:/tmp/ramengo_schema.sql
-# docker cp ./schemas/ramengo-insert.sql <container_name>:/tmp/ramengo_insert.sql
-
-# docker compose exec db psql -U postgres -d ramengo -c "\i /tmp/ramengo_schema.sql"
-# docker compose exec db psql -U postgres -d ramengo -c "\i /tmp/ramengo_insert.sql"
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ramengo
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: ramen
+    ports:
+      - 3306:3306

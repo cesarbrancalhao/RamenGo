@@ -1,5 +1,7 @@
+USE ramengo;
+
 CREATE TABLE IF NOT EXISTS broth (
-    id VARCHAR(255) PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     image_inactive TEXT,
     image_active TEXT,
     name VARCHAR(255),
@@ -8,7 +10,7 @@ CREATE TABLE IF NOT EXISTS broth (
 );
 
 CREATE TABLE IF NOT EXISTS protein (
-    id VARCHAR(255) PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     image_inactive TEXT,
     image_active TEXT,
     name VARCHAR(255),
@@ -17,7 +19,7 @@ CREATE TABLE IF NOT EXISTS protein (
 );
 
 CREATE TABLE IF NOT EXISTS order_response (
-    id VARCHAR(255) PRIMARY KEY,
+    id INT PRIMARY KEY,
     description TEXT,
     image TEXT
 );
