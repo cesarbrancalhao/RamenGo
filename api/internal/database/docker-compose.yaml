@@ -10,3 +10,5 @@ services:
       MYSQL_PASSWORD: ramen
     ports:
       - 3306:3306
+
+# docker compose exec DB mysql -umysql -pramen // Connect to DB manually
