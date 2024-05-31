@@ -21,7 +21,7 @@ func Cors(c *gin.Context) {
         return
     }
 
-	if c.Request.Header[apiKeyHeader][0] != os.Getenv("API_KEY") {
+	if c.Request.Header[apiKeyHeader][0] != os.Getenv("API_KEY") { // This will be the only authentication process in this project, as I have limited time
 		c.AbortWithStatusJSON(http.StatusUnauthorized, models.ErrorResponse{Error: "Invalid API key"})
 		return
 	}
