@@ -36,6 +36,7 @@ Use [http://localhost:8080](http://localhost:8080) in your API tool to test the 
 
 ### Cloud (for Red Ventures team):
 Use [this endpoint](https://ramengo-back.onrender.com) to access the API.
+WARNING: due to Render's nature, instances can spin down and delay requests by 50 seconds or more, in case you're experiencing timeouts, try again a minute or two later.
 
 ## <a name="stacks">Stacks</a>
 
