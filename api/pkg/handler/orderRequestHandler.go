@@ -1,9 +1,9 @@
 package handler
 
 import (
+	"api/common/filter"
 	"api/internal/models"
 	"net/http"
-	"strconv"
 
 	validator "api/pkg/middleware/validations"
 
@@ -20,16 +20,8 @@ func HandleOrderRequest(c *gin.Context) {
 	proteinId := order.ProteinId
 	brothId := order.BrothId
 	
-	orderResponseId := FindOrderResponseId(brothId, proteinId)
-	c.Writer.Header().Set("order-id", orderResponseId)
+	orderRecipeId := filter.FindOrderRecipeId(brothId, proteinId)
+	c.Writer.Header().Set("recipe-id", orderRecipeId)
 
 	c.Next()
-}
-
-func FindOrderResponseId(b string, p string) string {
-	broth := map[string]int { "1": 0, "2": 3, "3": 6 }
-	protein := map[string]int { "1": 1, "2": 2, "3": 3 }
-	
-	orderId := strconv.Itoa(broth[b] + protein[p])
-	return orderId
 }
