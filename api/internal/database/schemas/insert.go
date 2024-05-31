@@ -14,7 +14,7 @@ func init() {
 func main() {
 	InserBroths()
 	InserProteins()
-	insertOrderResponses()
+	insertRecipes()
 }
 
 func InserBroths() {
@@ -64,50 +64,50 @@ func InserProteins() {
 	})
 }
 
-func insertOrderResponses() {
+func insertRecipes() {
 
-	database.DB.Create(&models.OrderResponse{
-		Description: "Salt and Chasu Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
+	database.DB.Create(&models.Recipe{
+		Name: "Salt and Chasu Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Salt and Yasai Vegetarian Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Salt and Yasai Vegetarian Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Salt and Karaague Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Salt and Karaague Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Shoyu and Chasu Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Shoyu and Chasu Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Shoyu and Yasai Vegetarian Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Shoyu and Yasai Vegetarian Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Shoyu and Karaague Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Shoyu and Karaague Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Miso and Chasu Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Miso and Chasu Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenChasu.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Miso and Yasai Vegetarian Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Miso and Yasai Vegetarian Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenYasai%20Vegetarian.png",
 	})
 
-	database.DB.Create(&models.OrderResponse{	
-		Description: "Miso and Karaague Ramen",
-		Image:       "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
+	database.DB.Create(&models.Recipe{	
+		Name: "Miso and Karaague Ramen",
+		Image: "https://tech.redventures.com.br/icons/ramen/ramenKaraague.png",
 	})
 }

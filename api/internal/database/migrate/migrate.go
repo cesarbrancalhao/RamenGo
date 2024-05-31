@@ -14,5 +14,6 @@ func init() {
 func main() {
 	database.DB.AutoMigrate(&models.Broth{})
 	database.DB.AutoMigrate(&models.Protein{})
+	database.DB.AutoMigrate(&models.Recipe{})
 	database.DB.AutoMigrate(&models.OrderResponse{})
 }
