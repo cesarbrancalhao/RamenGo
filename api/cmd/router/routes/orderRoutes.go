@@ -3,20 +3,21 @@ package router
 import (
 	controller "api/cmd/controller"
 	"api/pkg/handler"
-	middleware "api/pkg/middleware/cors"
+	cors "api/pkg/middleware/cors"
+	httpHandler "api/pkg/middleware/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func OrderRoutes(router *gin.Engine) {
 	
-	router.GET("/orders", middleware.Cors, controller.GetAllOrderResponses)
-	router.GET("/orders/:id", middleware.Cors, controller.GetOrderResponse)
-	router.POST("/orders", middleware.Cors, controller.CreateOrderResponse)
-	router.POST("/order",
-		middleware.Cors,
+	router.GET("/orders", cors.Cors, controller.GetAllOrderResponses)
+	router.GET("/orders/:id", cors.Cors, controller.GetOrderResponse)
+	router.POST("/orders",
+		cors.Cors,
 		handler.HandleOrderRequest,
-		controller.GetOrderResponseByRequest)
-	router.PUT("/orders", middleware.Cors, controller.UpdateOrderResponse)
-	router.DELETE("/orders", middleware.Cors, controller.DeleteOrderResponse)
+		httpHandler.GenerateId,
+		controller.CreateOrder)
+	router.PUT("/orders", cors.Cors, controller.UpdateOrderResponse)
+	router.DELETE("/orders", cors.Cors, controller.DeleteOrderResponse)
 }

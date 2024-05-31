@@ -11,6 +11,7 @@ func StartRouter() {
 	router := gin.Default()
 
 	routes.OrderRoutes(router)
+	routes.RecipeRoutes(router)
 	routes.BrothRoutes(router)
 	routes.ProteinRoutes(router)
 	
