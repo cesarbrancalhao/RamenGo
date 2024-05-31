@@ -11,6 +11,7 @@ func GetBroths() ([]models.Broth, error) {
 	return broths, err
 }
 
+// For this is a techincal test project, I wont support the below methods
 func CreateBroth(b *models.Broth) error {
 	err := database.DB.Create(b).Error
 	return err

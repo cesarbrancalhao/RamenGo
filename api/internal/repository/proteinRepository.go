@@ -12,7 +12,6 @@ func GetProteins() ([]models.Protein, error) {
 }
 
 // For this is a techincal test project, I wont support the below methods
-// I may expand it later on
 func CreateProtein(b *models.Protein) error {
 	err := database.DB.Create(b).Error
 	return err

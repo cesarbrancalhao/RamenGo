@@ -1,7 +1,7 @@
 package models
 
 type OrderResponse struct {
-	Id          int    `json:"id" validate:"gt=0" gorm:"primaryKey"`
+	Id          string `json:"id" validate:"nonzero" gorm:"primaryKey"`
 	Description string `json:"description" validate:"nonzero"`
 	Image       string `json:"image" validate:"nonzero"`
 }
