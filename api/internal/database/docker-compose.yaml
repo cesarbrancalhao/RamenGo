@@ -1,0 +1,14 @@
+services:
+  DB:
+    image: mysql:5.7
+    container_name: ramengo-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ramengo
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: ramen
+    ports:
+      - 3306:3306
+
+# docker compose exec DB mysql -umysql -pramen // Connect to DB manually
