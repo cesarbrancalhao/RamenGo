@@ -14,13 +14,13 @@ RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red 
 Set up your docker container.
 
 ```bash
-./scripts/compose.sh
+npm run compose
 ```
 
 After the initialization, migrate the models.
 
 ```bash
-./scripts/migrate.sh
+npm run migrate
 ```
 
 Create a .env file and insert your x-api-key. Check [.env.example](api/.env.example) for examples.
@@ -28,7 +28,7 @@ Create a .env file and insert your x-api-key. Check [.env.example](api/.env.exam
 Run the development server:
 
 ```bash
-./scripts/run.sh
+npm run api
 ```
 
 Use [http://localhost:8080](http://localhost:8080) in your API tool to test the API locally.
