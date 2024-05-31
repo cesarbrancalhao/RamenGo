@@ -3,7 +3,6 @@ package controller
 import (
 	"api/internal/models"
 	"api/internal/repository"
-	"errors"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -32,32 +31,27 @@ func GetOrderResponse(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
-func GetOrderResponseByRequest(c *gin.Context) {
-	id := c.Writer.Header().Get("order-id")
-	res, err := repository.GetOrderResponse(id)
-
+func CreateOrder(c *gin.Context) {
+	id := c.Writer.Header().Get("recipe-id")
+	rec, err := repository.GetRecipe(id)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
 	}
 
-	c.JSON(http.StatusOK, res)
-}
-
-// For this is a techincal test project, I wont support the below methods, I built them for showcase purposes
-func CreateOrderResponse(c *gin.Context) {
-	var orderResponse *models.OrderResponse
-	if err := c.ShouldBindJSON(&orderResponse); err != nil {
-		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
-		return
+	orderResponse := &models.OrderResponse{
+		Id:          c.Writer.Header().Get("order-id"),
+		Description: rec.Name,
+		Image:       rec.Image,
 	}
-	// err := repository.CreateOrderResponse(orderResponse)
-	err := errors.New("service unavailable, to make an order use /order")
+
+	err = repository.CreateOrderResponse(orderResponse)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, orderResponse)
+
+    c.JSON(http.StatusOK, orderResponse)
 }
 
 func UpdateOrderResponse(c *gin.Context) {
@@ -66,8 +60,7 @@ func UpdateOrderResponse(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}
-	// err := repository.UpdateOrderResponse(orderResponse)
-	err := errors.New("service unavailable")
+	err := repository.UpdateOrderResponse(orderResponse)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
@@ -81,8 +74,7 @@ func DeleteOrderResponse(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}
-	// err := repository.DeleteOrderResponse(orderResponse)
-	err := errors.New("service unavailable")
+	err := repository.DeleteOrderResponse(orderResponse)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
