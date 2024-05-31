@@ -1,0 +1,7 @@
+# Environment
+.env
+
+# Npm
+dist/
+node_modules/
+package-lock.*

@@ -1,0 +1,14 @@
+{
+  "name": "ramengo",
+  "version": "1.0.0",
+  "description": "RamenGo is a food app built in Gin for Red Ventures",
+  "main": "client/index.js",
+  "scripts": {
+    "compose": "cd api/internal/database/ && docker-compose up -d",
+    "migrate": "cd api/ && go run internal/database/migrate/migrate.go && go run internal/database/schemas/insert.go",
+    "api": "cd api/ && go run cmd/main.go",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M. Cesar Brancalhão Filho",
+  "license": "MIT"
+}
