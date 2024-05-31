@@ -6,13 +6,15 @@ RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red 
 1. [Getting Started](#start)
 2. [Tech Stacks](#stacks)
 
-### <a name="start">Getting Started</a>
 
+## <a name="start">Getting Started</a>
+### Local:
 Set up your docker container.
 
 ```bash
 ./scripts/compose.sh
 ```
+
 After the initialization, migrate the models.
 
 ```bash
@@ -27,9 +29,13 @@ Run the development server:
 ./scripts/run.sh
 ```
 
-Use [http://localhost:8080](http://localhost:8080) in your API tool to test.
+Use [http://localhost:8080](http://localhost:8080) in your API tool to test the API locally.
 
-### <a name="stacks">Stacks</a>
+
+### Cloud (for Red Ventures team):
+Use [this endpoint](https://ramengo-back.onrender.com) to access the API.
+
+## <a name="stacks">Stacks</a>
 
 - [Gin](https://github.com/gin-gonic/gin)
 - [Go](https://go.dev/)
@@ -38,3 +44,5 @@ Use [http://localhost:8080](http://localhost:8080) in your API tool to test.
 - [MySQL](https://www.mysql.com/)
 - [JavaScript](https://www.javascript.com/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Aiven](https://console.aiven.io/)
+- [Render](https://dashboard.render.com/)
