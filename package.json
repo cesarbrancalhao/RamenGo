@@ -10,5 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "M. Cesar Brancalhão Filho",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "scss": "^0.2.4"
+  }
 }
