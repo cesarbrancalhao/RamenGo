@@ -13,7 +13,7 @@ func GetAllOrderResponses() ([]models.OrderResponse, error) {
 
 func GetOrderResponse(id string) (models.OrderResponse, error) {
 	var orderResponse models.OrderResponse
-	err := database.DB.Where("id = ?", id).First(&orderResponse).Error
+	err := database.DB.Where("id=?", id).First(&orderResponse).Error
 	return orderResponse, err
 }
 

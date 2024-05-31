@@ -15,13 +15,25 @@ func GetAllOrderResponses(c *gin.Context) {
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
+	}	
+	c.JSON(http.StatusOK, res)
+}
+
+
+func GetOrderResponse(c *gin.Context) {
+	id := c.Param("id")
+	res, err := repository.GetOrderResponse(id)
+
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
+		return
 	}
 
 	c.JSON(http.StatusOK, res)
 }
 
-func GetOrderResponse(c *gin.Context) {
-	id := c.Param("id")
+func GetOrderResponseByRequest(c *gin.Context) {
+	id := c.Writer.Header().Get("order-id")
 	res, err := repository.GetOrderResponse(id)
 
 	if err != nil {
@@ -40,7 +52,7 @@ func CreateOrderResponse(c *gin.Context) {
 		return
 	}
 	// err := repository.CreateOrderResponse(orderResponse)
-	err := errors.New("service unavailable")
+	err := errors.New("service unavailable, to make an order use /order")
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
