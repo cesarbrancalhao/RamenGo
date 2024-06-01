@@ -6,7 +6,25 @@
     width: 125px;
     height: 16px;
 }
-  
+
+@keyframes growImg {
+    from {
+        background-size: 0;
+    }
+    to {
+        background-size: 610px;
+    }
+}
+
+@keyframes fadeTxt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .header {
     background-image: url("../../assets/patterns/pattern-vermelha.png");
     height: 700px;
@@ -16,7 +34,10 @@
     position: relative;
 
     &-image {
-        background-image: url("../../assets/patterns/ilustra.svg");
+        animation-name: growImg;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        background-image: url("../../assets/images/ilustra.png");
         height: 80%;
         background-position: center;
         background-repeat: no-repeat;
@@ -25,13 +46,15 @@
     }
 
     &-text {
+        animation-name: fadeTxt;
+        animation-duration: 2.1s;
+        animation-fill-mode: forwards;
         position: relative;
         height: 100%;
-        
         width: 100%;
         height: auto;
         margin: 0 auto;
-        transform: translate(-52%, -105%);
+        transform: translate(-70%, -130%);
         max-width: 24ch;
         word-wrap: break-word;
         color: white;
