@@ -15,8 +15,8 @@ body, html {
     background-image: url("../../assets/patterns/pattern-vermelha.png");
     height: 700px;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: 50%;
     position: relative;
 
     &-text {
