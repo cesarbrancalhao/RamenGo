@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+}
+  
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 125px;
+    height: 16px;
+}
+  
+.header {
+    background-image: url("../../assets/patterns/pattern-vermelha.png");
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &-text {
+        position: absolute;
+        top: 60%;
+        left: 31%;
+        max-width: 24ch;
+        word-wrap: break-word;
+        color: white;
+    }
+
+    &-text p {
+        font: 500 1rem/1.5;
+        padding-bottom: 24px;
+    }
+}
