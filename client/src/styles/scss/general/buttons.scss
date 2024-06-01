@@ -28,5 +28,11 @@
         &:hover::after {
         transform: translateX(4px);
         }
+    
+        &.center {
+            display: flex;
+            justify-content: center;
+        }
+    
     }
 }
