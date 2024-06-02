@@ -25,28 +25,11 @@ const throwError = (response) => {
     throw new Error(response.status);
 }
 
-export function getBroths() {
-    fetch(`${API_URL}/broths`, getoptions)
+const getFromApi = (path, options) => fetch(`${API_URL}/${path}`, options)
     .then(response => response.ok ? response.json() : throwError(response))
-    .then(data => console.log(data))
     .catch(error => console.error('Erro:', error));
-}
 
-export function getProteins() {
-    fetch(`${API_URL}/proteins`, getoptions)
-    .then(response => response.ok ? response.json() : throwError(response))
-    .catch(error => console.error('Erro:', error));
-}
-
-export function getRecipes() {
-    fetch(`${API_URL}/recipes`, getoptions)
-    .then(response => response.ok ? response.json() : throwError(response))
-    .catch(error => console.error('Erro:', error));
-}
-
-export function generateOrder(brothId, proteinId) {
-    fetch(`${API_URL}/orders`, generateorderoptions(brothId, proteinId))
-    .then(response => response.ok ? response.json() : throwError(response))
-    .then(data => console.log(data))
-    .catch(error => console.error('Erro:', error));
-}
+export const getBroths = () => getFromApi('broths', getoptions);
+export const getProteins = () => getFromApi('proteins', getoptions);
+export const getRecipes = () => getFromApi('recipes', getoptions);
+export const generateOrder = (brothId, proteinId) => getFromApi('orders', generateorderoptions(brothId, proteinId));
