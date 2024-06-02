@@ -69,6 +69,7 @@
         width: 104px;
         height: 104px;
         padding: 40px 0 10px;
+        user-select: none;
 
         @media (max-width: 891px) { // Image media
           width: 72.8px;
