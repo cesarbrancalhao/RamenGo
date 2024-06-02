@@ -9,6 +9,7 @@
     "migrate": "cd api/ && go run internal/database/migrate/migrate.go && go run internal/database/schemas/insert.go",
     "api": "cd api/ && go run cmd/main.go",
     "sass": "sass --watch  client/src/styles/scss/style.scss client/src/styles/css/dist.css",
+    "mysql": "cd api/internal/database/ && docker compose exec DB mysql -umysql -pramen",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "M. Cesar Brancalhão Filho",
