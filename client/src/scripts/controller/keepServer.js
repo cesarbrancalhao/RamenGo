@@ -1,25 +1,16 @@
 import { API_KEY, API_URL } from '../config/config';
 
-const twomin = 2 * 60 * 1000;
-const fivesec = 5 * 1000;
-const threemin = 3 * 60 * 1000;
-
-const sleepy = (response) => {
-    throw new Error(response.status);
-}
+const fivesec = 5 * 1000; // You might adjust intervals for testing
+const fivemin = 5 * 60 * 1000;
+const tenmin = 10 * 60 * 1000;
 
 export function wakeUp() {
     setInterval(() => {
         fetch(`${API_URL}/`, {
-            method: 'GET',
-            headers: {
-                'x-api-key': API_KEY,
-                'Content-Type': 'application/json',
-            },
+            method: 'OPTIONS'
         })
-        .then(response => response.ok ? response.json() : sleepy(response))
-        .catch(error => console.error('Erro:', error));
-    }, threemin);
+        .catch(error => console.error('Erro (wakeup):', error));
+    }, tenmin);
 };
 
 /*
