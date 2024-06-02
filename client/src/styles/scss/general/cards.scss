@@ -9,9 +9,17 @@
    .card {
       background-color: var(--color-4);
       box-shadow: 0px 4px 12px 0px rgba(224,219,191, 0.6); // Changed from  #E0DBBF for transparency
+
       min-width: 320px;
+      max-width: 320px;
+      min-height: 316px;
       min-height: 316px;
       border-radius: 12px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       text-align: center;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
@@ -48,10 +56,12 @@
         font-weight: 500;
         font-size: 0.9rem;
         line-height: 1;
-        margin: 15px 10px 30px 10px;
+        margin: 15px 10px 0 10px;
+        max-width: 35ch;
       }
 
       .card-price {
+        margin: auto 0 50px 0;
         color: var(--color-2);
       }
   
@@ -60,23 +70,30 @@
         height: 104px;
         padding: 40px 0 10px;
 
-        @media (max-width: 891px) {
+        @media (max-width: 891px) { // Image media
           width: 72.8px;
           height: 72.8px;
         }
       }
       
-      @media (max-width: 891px) {
+      @media (max-width: 891px) { // Card media
+
+        .card-price {
+          margin: auto 0 30px 0;
+        }
+
         min-width: 282px;
+        max-width: 282px;
         min-height: 279px;
+        max-height: 279px;
       }
     }
 
-    @media (min-width: 891px) {
+    @media (min-width: 891px) { // Container media (Desktop)
       flex-wrap: wrap;
     }
 
-    @media (max-width: 890px) {
+    @media (max-width: 890px) { // Container media (Mobile)
       justify-content:space-between;
       margin: 20px 10px;
 
