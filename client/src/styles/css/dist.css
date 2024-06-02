@@ -57,6 +57,7 @@
 }
 
 .btn-center {
+  opacity: 0;
   display: flex;
   justify-content: center;
 }
@@ -207,11 +208,9 @@ html {
 }
 
 .main-text {
+  opacity: 0;
   text-align: center;
   margin-bottom: 47px;
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
 }
 .main-text h2 {
   font-weight: 900;
