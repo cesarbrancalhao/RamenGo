@@ -247,6 +247,10 @@ html {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @keyframes growImgHeader {
   from {
     background-size: 0;
