@@ -1,5 +1,9 @@
-.content {
-    margin: 110px 0 95px 0;
+.container {
+    margin: 70px 0 100px 0;
+
+    @media (max-width: 890px) {
+        margin: 50px 0 70px 0;
+    }
 }
   
 .main-text {

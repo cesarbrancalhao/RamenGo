@@ -29,10 +29,14 @@
         transform: translateX(4px);
         }
     
-        &.center {
-            display: flex;
-            justify-content: center;
-        }
-    
+    }
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 890px) {
+        margin-top: 40px;
     }
 }
