@@ -28,6 +28,20 @@
         &:hover::after {
         transform: translateX(4px);
         }
+
+        &.inactive {
+            background: var(--color-5);
+            cursor: not-allowed;
+
+            &::after {
+                background: url("../../assets/icons/inactive/inactive-arrow.svg");
+            }
+
+            &:hover::after {
+                transform: none;
+            }
+
+        }
     
     }
 }
