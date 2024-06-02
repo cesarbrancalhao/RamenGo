@@ -1,27 +1,110 @@
-.cards {
+.card-container {
     display: flex;
     justify-content: center;
     gap: 64px;
-    margin: 0 100px;
+    margin: 0 50px;
     margin-bottom: 50px;
-    flex-wrap: wrap;
+    padding: 15px;
   
-   .card-item {
+   .card {
       background-color: var(--color-4);
       box-shadow: 0px 4px 12px 0px rgba(224,219,191, 0.6); // Changed from  #E0DBBF for transparency
-      max-width: 320px;
-      max-height: 316px;
-      width: 100%;
-      height: 100%;
-      min-width: 240px; // Scaled down to 75% from 320px
-      min-height: 237px;
+      min-width: 320px;
+      min-height: 316px;
       border-radius: 12px;
       text-align: center;
       cursor: pointer;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.2s ease-in-out;
   
       &:hover {
         transform: scale(1.05);
       }
+  
+      &.selected {
+        background-color: var(--color-1);
+
+        .card-title,
+        .card-description {
+          color: var(--color-w);
+        }
+
+        .card-price {
+          color: var(--color-3);
+        }
+      }
+      
+      .card-title,
+      .card-price {
+        font-weight: 900;
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+
+      .card-title {
+        color: var(--color-1);
+      }
+
+      .card-description {
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 1;
+        margin: 15px 0 30px;
+      }
+
+      .card-price {
+        color: var(--color-2);
+      }
+  
+      img {
+        width: 104px;
+        height: 104px;
+        padding: 40px 0 10px;
+
+        @media (max-width: 891px) {
+          width: 72.8px;
+          height: 72.8px;
+        }
+      }
+      
+      @media (max-width: 891px) {
+        min-width: 282px;
+        min-height: 279px;
+      }
     }
-  }
+
+    @media (min-width: 891px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 890px) {
+      justify-content:space-between;
+      margin: 20px 10px;
+
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      overflow-y: hidden;
+      overflow-x: scroll;
+      
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 999px;
+        border: none; 
+      }
+
+      // Touch
+      -webkit-app-region: drag;
+      user-select: none;
+    }
+}
