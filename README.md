@@ -5,7 +5,7 @@ RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red 
 
 <div align="center">
     
-![Alt text](./client/src/assets/prints/print-header.png?raw=true)
+![Alt text](./client/src/assets/prints/print-go.png?raw=true)
 
 </div>
 
