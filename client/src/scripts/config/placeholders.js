@@ -104,6 +104,7 @@ const recipes = [
         "id": Math.floor(Math.random() * 100000)
     }
 ];
+
 const findOrderRecipeId = (b, p) => {
     if (b === "0" || p === "0") return recipes[9];
     const brothMap = {"1": 0, "2": 3, "3": 6};
