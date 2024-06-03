@@ -1,0 +1,96 @@
+.modal {
+    z-index: 2;
+    background-color: var(--color-4);
+
+   .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #dish-img {
+            width: 280px;
+            margin-top: 20%;
+        }
+    }
+
+    &-container {
+        @media (min-width: 1032px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-header {
+        background-image: url("../../assets/patterns/pattern-azul.png");
+        height: 700px;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: 50%;
+        position: relative;
+
+        p {
+            text-align: center;
+            color: var(--color-w);
+            font-weight: 750;
+            font-size: 1.6rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--color-3);
+            font-weight: 900;
+            font-size: 2rem;
+            margin: 0 10px;
+        }
+    }
+
+    &-main {
+        
+        .message {
+            .success-bowing {
+                margin: 0;
+                margin-bottom: 20px;
+                width: 65px;
+            }
+
+            .success-text {
+                width: 328px;
+                margin: 0;
+                margin-bottom: 10px;
+
+                @media (min-width: 1032px) {
+                    width: 382px;
+                }
+            }
+
+            h2 {
+                text-align: center;
+                color: var(--color-2);
+                font-weight: 900;
+                font-size: 2rem;
+            }
+
+            p {
+                text-align: center;
+                margin: 10px 0 35px 0;
+
+                @media (max-width: 1032px) {
+                    margin: 10px 10px 30px 10px;
+                }
+
+            }
+        }
+
+        @media (max-width: 1032px) {
+            margin: 50px 0;
+        }
+
+    }
+
+    &-header,
+    &-main {
+        @media (min-width: 1032px) {
+            height: 100vh;
+        }
+    }
+}

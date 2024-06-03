@@ -13,7 +13,12 @@ func Cors(c *gin.Context) {
     w.Header().Set("Access-Control-Allow-Origin", "*")
     w.Header().Set("Access-Control-Allow-Credentials", "true")
     w.Header().Set("Access-Control-Allow-Headers", "Content-Type, x-api-key")
-    w.Header().Set("Access-Control-Allow-Methods", "POST, GET")
+    w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
+
+    if c.Request.Method == http.MethodOptions {
+        c.AbortWithStatus(http.StatusOK)
+        return
+    }
 
     apiKeyHeader := http.CanonicalHeaderKey("x-api-key")
     if _, ok := c.Request.Header[apiKeyHeader];!ok || len(c.Request.Header[apiKeyHeader]) == 0 {

@@ -1,0 +1,105 @@
+@import '../animations/animations';
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 125px;
+    height: 16px;
+
+    @media (max-width: 890px) {
+        width: 150px; // Upscaled 20%
+        height: 19.2px;
+        margin: 0 auto;
+        margin-bottom: -20px;
+        padding-left: 0;
+
+        img {
+            width: 150px;
+            height: 19.2px;
+        }
+    }
+}
+
+.header {
+    background-image: url("../../assets/patterns/pattern-vermelha.png");
+    height: 700px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 50%;
+    position: relative;
+
+    &-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 610px;
+        position: relative;
+        background-image: url("../../assets/images/ilustra.png");
+        height: 80%;
+
+        .header-arrow {
+            display: none;
+    
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        
+            @media (max-width: 890px) {
+                display: block;
+                position: absolute;
+                bottom: 3.5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (min-width: 891px) {
+            animation-name: growImgHeader;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @media (max-width: 890px) {
+            background-image: url("../../assets/images/ilustra-mobile.png");
+            height: 100%;
+            background-size: 480px;
+        }
+
+        @media (max-width: 680px) {
+            background-size: 70%;
+        }
+
+        @media (max-width: 450px) {
+            background-size: 80%;
+        }
+    }
+
+    &-text {
+        opacity: 0;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 24ch;
+        word-wrap: break-word;
+        color: var(--color-w);
+        transform: translate(-70%, -130%);
+
+        @media (max-width: 890px) {
+            display: none;
+        }
+    }
+
+    p {
+        font-weight: 520;
+        font-size: 0.95rem;
+        padding-bottom: 24px;
+    }
+
+    @media (max-width: 890px) {
+        height: 100vh;
+    }
+}

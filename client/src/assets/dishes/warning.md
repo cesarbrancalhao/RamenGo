@@ -1,0 +1,1 @@
+These should be used as placeholders in case the server is down or orderResponses image links expired.

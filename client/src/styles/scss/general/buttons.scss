@@ -1,0 +1,58 @@
+.btn {
+    display: inline-block;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    color: var(--color-w);
+    background: var(--color-1);
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
+
+    &.arrow {
+        display: flex;
+        align-items: center;
+
+        &::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+        margin-left: 20px;
+        background: url("../../assets/icons/active/active-arrow.svg");
+        transition: transform 0.2s;
+        }
+
+        &:hover::after {
+        transform: translateX(4px);
+        }
+
+        &.inactive {
+            background: var(--color-5);
+            cursor: not-allowed;
+
+            &::after {
+                background: url("../../assets/icons/inactive/inactive-arrow.svg");
+            }
+
+            &:hover::after {
+                transform: none;
+            }
+
+        }
+    
+    }
+}
+
+.btn-center {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 890px) {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamenGO</title>
+
+    <link rel="icon" href="./src/assets/icons/favicon.svg" type="image/svg+xml">
+
+    <link rel="preload" href="./src/styles/css/dist.css" as="style">
+    <link rel="stylesheet" href="./src/styles/css/dist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800;900&display=swap" rel="stylesheet">
+
+    <script src="./src/scripts/view/header.js"></script>
+</head>
+<body>
+    <header id="header" class="header">
+
+        <nav class="logo-container">
+            <a href="./index.html"><img src="./src/assets/icons/logo-yellow.svg"  alt="Logo"></a>
+        </nav>
+
+        
+        <div class="header-image">
+            <a href="#main" class="header-arrow"><img src="./src/assets/icons/down-arrow.svg" alt="Scroll Down"></a>
+        </div>
+
+        <div class="header-text">
+            <p>Enjoy a good ramen in the comfort of your house.<br/>
+                Create your own ramen and choose your favorite flavour combination!</p>
+            <a href="#main" class="btn arrow">Order now</a>
+        </div>
+
+    </header>
+
+    <main id="main" class="container">
+
+        <div class="main-text">
+            <h2>First things first: select your favorite broth.</h2>
+            <p>It will give the whole flavor on your ramen soup.</p>
+        </div>
+
+        <div class="card-container" id="broth"></div>
+
+        <div class="main-text">
+            <h2>It’s time to choose (or not) your meat!</h2>
+            <p>Some people love, some don’t. We have options for all tastes.</p>
+        </div>
+        
+        <div class="card-container" id="protein"></div>
+
+        <div class="btn-center">
+            <a class="btn arrow inactive" id="order">Place order</a>
+        </div>
+
+    </main>
+
+    <div class="modal hidden">
+    </div>
+
+    <script src="./src/scripts/dist/main.js"></script>
+</body>
+</html>
