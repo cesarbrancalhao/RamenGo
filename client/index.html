@@ -16,7 +16,7 @@
     <script src="./src/scripts/view/header-animation.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header index">
 
         <nav class="logo-container">
             <a href="./index.html"><img src="./src/assets/icons/logo-yellow.svg"  alt="Logo"></a>
@@ -30,12 +30,12 @@
         <div class="header-text">
             <p>Enjoy a good ramen in the comfort of your house.<br/>
                 Create your own ramen and choose your favorite flavour combination!</p>
-            <a href="#main" class="btn arrow">ORDER NOW</a>
+            <a href="#main" class="btn arrow">Order now</a>
         </div>
 
     </header>
 
-    <main id="main" class="container">
+    <main id="main" class="container index">
 
         <div class="main-text">
             <h2>First things first: select your favorite broth.</h2>
@@ -52,10 +52,43 @@
         <div class="card-container" id="protein"></div>
 
         <div class="btn-center">
-            <a class="btn arrow inactive" id="order">PLACE NEW ORDER</a>
+            <a class="btn arrow inactive" id="order">Place order</a>
         </div>
 
     </main>
+
+    <div class="modal hidden">
+        <div class="modal-container">
+
+            <div class="modal-header">
+
+                <div class="logo-container">
+                    <a href="./index.html" id="dish-img"><img src="./src/assets/icons/logo-red.svg"  alt="Logo"></a>
+                </div>
+
+                <div class="center">
+                    <img src="./src/assets/dishes/chasu.png" alt="">
+                </div>
+
+                <div>
+                    <p>Your Order:</p>
+                    <h2 id="dish-name">We couldn't find this dish name :(</h2>
+                </div>
+
+            </div>
+
+            <div class="modal-main center">
+                <div class="message">
+                    <div class="center"><img class="success-bowing" src="./src/assets/icons/bowing.svg" alt=""></div>
+                    <div class="center"><img class="success-text" src="./src/assets/icons/bowing-text.png" alt=""></div>
+                    <div class="center"><h2>Your order is being prepared</h2></div>
+                    <div class="center"><p>Hold on, when you least expect you will be eating your rámen.</p></div>
+                    <div class="center"><a class="btn arrow" id="order">Place new order</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script src="./src/scripts/dist/main.js"></script>
 </body>
