@@ -1,7 +1,11 @@
 # RamenGo
 RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red Ventures'](https://redventures.com.br/) techincal test.
 
+<div align="center">
+    
 ![Alt text](./client/src/assets/prints/print-header.png)
+
+</div>
 
 ## Table of Contents
 
