@@ -1,8 +1,2 @@
-const turnActive = (btn, action) => { btn.classList.remove('inactive'); btn.onclick = () => action };
+const openModal = () => document.querySelector('.modal').classList.remove('hidden');
 
-const turnInactive = (btn) => { btn.classList.add('inactive'); btn.onclick = null };
-
-export const turnBtnActive = (button, action) => {
-    document.querySelectorAll('.selected').length === 2 ? 
-    turnActive(button, action) : turnInactive(button);
-};
