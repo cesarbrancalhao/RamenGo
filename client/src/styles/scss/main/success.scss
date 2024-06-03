@@ -7,8 +7,8 @@
         justify-content: center;
         align-items: center;
 
-        img {
-            width: 400px;
+        #dish-img {
+            width: 280px;
             margin-top: 20%;
         }
     }
@@ -47,21 +47,19 @@
     &-main {
         
         .message {
-            img {
-                &.success-bowing {
-                    margin: 0;
-                    margin-bottom: 20px;
-                    width: 65px;
-                }
+            .success-bowing {
+                margin: 0;
+                margin-bottom: 20px;
+                width: 65px;
+            }
 
-                &.success-text {
-                    width: 328px;
-                    margin: 0;
-                    margin-bottom: 10px;
+            .success-text {
+                width: 328px;
+                margin: 0;
+                margin-bottom: 10px;
 
-                    @media (min-width: 1032px) {
-                        width: 382px;
-                    }
+                @media (min-width: 1032px) {
+                    width: 382px;
                 }
             }
 
@@ -76,14 +74,14 @@
                 text-align: center;
                 margin: 10px 0 35px 0;
 
-                @media (max-width: 890px) {
+                @media (max-width: 1032px) {
                     margin: 10px 10px 30px 10px;
                 }
 
             }
         }
 
-        @media (max-width: 890px) {
+        @media (max-width: 1032px) {
             margin: 50px 0;
         }
 

@@ -263,8 +263,8 @@ html {
   justify-content: center;
   align-items: center;
 }
-.modal .center img {
-  width: 400px;
+.modal .center #dish-img {
+  width: 280px;
   margin-top: 20%;
 }
 @media (min-width: 1032px) {
@@ -294,18 +294,18 @@ html {
   font-size: 2rem;
   margin: 0 10px;
 }
-.modal-main .message img.success-bowing {
+.modal-main .message .success-bowing {
   margin: 0;
   margin-bottom: 20px;
   width: 65px;
 }
-.modal-main .message img.success-text {
+.modal-main .message .success-text {
   width: 328px;
   margin: 0;
   margin-bottom: 10px;
 }
 @media (min-width: 1032px) {
-  .modal-main .message img.success-text {
+  .modal-main .message .success-text {
     width: 382px;
   }
 }
@@ -319,12 +319,12 @@ html {
   text-align: center;
   margin: 10px 0 35px 0;
 }
-@media (max-width: 890px) {
+@media (max-width: 1032px) {
   .modal-main .message p {
     margin: 10px 10px 30px 10px;
   }
 }
-@media (max-width: 890px) {
+@media (max-width: 1032px) {
   .modal-main {
     margin: 50px 0;
   }
