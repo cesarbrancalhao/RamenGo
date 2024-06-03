@@ -1,7 +1,7 @@
 # RamenGo
 RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red Ventures'](https://redventures.com.br/) techincal test.
 
-![Alt text](client/assets/images/capa.jpg?raw=true)
+![Alt text](./client/src/assets/prints/print-header.png)
 
 ## Table of Contents
 
@@ -87,4 +87,5 @@ WARNING: due to Render's nature, instances can spin down and delay requests by 5
 - **Continuous Integration/Deployment**: Sets up CI/CD pipelines using GitHub and Render, automating the build, test, and deployment processes for faster and safer releases.
 
 - **Database Abstraction Layer**: Utilizes GORM library for abstracting database operations and simplifying CRUD operations while offering powerful query capabilities and migrations.
-    
+
+![Alt text](./client/src/assets/prints/print-main.png)
