@@ -23,7 +23,7 @@ const proteins = [
         "imageActive": "./src/assets/icons/active/active-chicken.svg",
         "name": "Karaague",
         "description": "Three units of fried chicken, moyashi, ajitama egg and other vegetables.",
-        "price": 0
+        "price": 12
     }
 ];
 
