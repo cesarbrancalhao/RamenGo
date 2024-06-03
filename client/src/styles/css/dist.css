@@ -255,11 +255,6 @@ html {
 }
 
 .modal {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
   z-index: 2;
   background-color: var(--color-4);
 }
@@ -270,7 +265,7 @@ html {
 }
 .modal .center img {
   width: 400px;
-  margin-top: 50px;
+  margin-top: 20%;
 }
 @media (min-width: 1032px) {
   .modal-container {
@@ -297,6 +292,7 @@ html {
   color: var(--color-3);
   font-weight: 900;
   font-size: 2rem;
+  margin: 0 10px;
 }
 .modal-main .message img.success-bowing {
   margin: 0;
@@ -314,12 +310,24 @@ html {
   }
 }
 .modal-main .message h2 {
+  text-align: center;
   color: var(--color-2);
   font-weight: 900;
   font-size: 2rem;
 }
 .modal-main .message p {
+  text-align: center;
   margin: 10px 0 35px 0;
+}
+@media (max-width: 890px) {
+  .modal-main .message p {
+    margin: 10px 10px 30px 10px;
+  }
+}
+@media (max-width: 890px) {
+  .modal-main {
+    margin: 50px 0;
+  }
 }
 @media (min-width: 1032px) {
   .modal-header, .modal-main {
