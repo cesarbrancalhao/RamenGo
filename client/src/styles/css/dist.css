@@ -270,7 +270,14 @@ html {
 }
 @media (max-width: 890px) {
   .logo-container {
+    width: 150px;
+    height: 19.2px;
     margin: 0 auto;
+    margin-bottom: -20px;
+  }
+  .logo-container img {
+    width: 150px;
+    height: 19.2px;
   }
 }
 
