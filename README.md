@@ -72,6 +72,7 @@ WARNING: due to Render's nature, instances can spin down and delay requests by 5
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Aiven](https://console.aiven.io/)
 - [Render](https://dashboard.render.com/)
+- [Vercel](https://vercel.com/)
 
 ## <a name="features">Features</a>
 
