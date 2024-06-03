@@ -1,6 +1,5 @@
 import { getBroths, getProteins } from "../controller/apiController";
 import { requestOrder, turnBtnActive } from "./button";
-import { openModal } from "./success";
 
 const brothCardContainer = document.querySelector('#broth');
 const proteinCardContainer = document.querySelector('#protein');
