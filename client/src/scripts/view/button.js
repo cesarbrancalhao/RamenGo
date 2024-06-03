@@ -12,9 +12,9 @@ export const turnBtnActive = (button, action) => {
     turnActive(button, action) : turnInactive(button);
 };
 
-export const requestOrder = () => {
+export const requestOrder = async () => {
     const brothId = parseInt(document.querySelector('#broth .selected').children[0].innerHTML);
     const proteinId = parseInt(document.querySelector('#protein .selected').children[0].innerHTML);
-    const { name, image } = generateOrder(brothId, proteinId);
-    openModal(name, image);
+    const { description, image } = await generateOrder(brothId, proteinId);
+    openModal(description, image);
 };
