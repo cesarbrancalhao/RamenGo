@@ -7,6 +7,10 @@
     padding-left: 40px;
     width: 125px;
     height: 16px;
+
+    @media (max-width: 890px) {
+        margin: 0 auto;
+    }
 }
 
 .header {
@@ -22,11 +26,28 @@
         background-repeat: no-repeat;
         background-size: 610px;
         position: relative;
-        animation-name: growImgHeader;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
         background-image: url("../../assets/images/ilustra.png");
         height: 80%;
+
+        @media (min-width: 891px) {
+            animation-name: growImgHeader;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @media (max-width: 890px) {
+            background-image: url("../../assets/images/ilustra-mobile.png");
+            height: 100%;
+            background-size: 480px;
+        }
+
+        @media (max-width: 680px) {
+            background-size: 70%;
+        }
+
+        @media (max-width: 450px) {
+            background-size: 80%;
+        }
     }
 
     &-text {
@@ -40,11 +61,24 @@
         word-wrap: break-word;
         color: var(--color-w);
         transform: translate(-70%, -130%);
+
+        @media (max-width: 890px) {
+            display: none;
+        }
     }
 
     p {
         font-weight: 520;
         font-size: 0.95rem;
         padding-bottom: 24px;
+    }
+
+    @media (max-width: 890px) {
+        height: 100vh;
+
+        &-arrow {
+            background-image: url("../../assets/icons/down-arrow.svg");
+        }
+
     }
 }
