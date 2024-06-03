@@ -211,7 +211,7 @@ html {
 }
 
 .container {
-  margin: 70px 0 100px 0;
+  margin: 50px 0 40px 0;
 }
 @media (max-width: 890px) {
   .container {
@@ -274,6 +274,7 @@ html {
     height: 19.2px;
     margin: 0 auto;
     margin-bottom: -20px;
+    padding-left: 0;
   }
   .logo-container img {
     width: 150px;
@@ -296,6 +297,22 @@ html {
   position: relative;
   background-image: url("../../assets/images/ilustra.png");
   height: 80%;
+}
+.header-image .header-arrow {
+  display: none;
+}
+.header-image .header-arrow img {
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 890px) {
+  .header-image .header-arrow {
+    display: block;
+    position: absolute;
+    bottom: 3.5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media (min-width: 891px) {
   .header-image {
@@ -346,9 +363,6 @@ html {
 @media (max-width: 890px) {
   .header {
     height: 100vh;
-  }
-  .header-arrow {
-    background-image: url("../../assets/icons/down-arrow.svg");
   }
 }
 
