@@ -9,11 +9,12 @@ const btnCenter = document.querySelector('.btn-center');
 
 const fadeIn = (element) => element.animate([{opacity: 0}, {opacity: 1}], {duration: 900, fill: 'forwards'});
 
-const createList = (list, container) => {
+const createList = (list, container, type) => {
     for (const x of Object.entries(list)) {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
+            <span class="hidden" id="${type}">${x[1].id}</span>
             <img class="card-image" id="inactive" src="${x[1].imageInactive}">
             <img class="card-image hidden" id="active" src="${x[1].imageActive}">
             <p class="card-title">${x[1].name}</p>
@@ -24,8 +25,7 @@ const createList = (list, container) => {
             selectCard(card, container); };
         card.addEventListener('click', () => turnBtnActive(document.querySelector('#order'), 
             () => {
-                const {name, image} = requestOrder(/*brothid, proteinid*/);
-                openModal( name, image );
+                requestOrder();
             }));
         container.appendChild(card);
 
@@ -76,8 +76,8 @@ export async function fillCards() {
     const proteinList = await getProteins();
 
     fadeIn(mainText[0]);
-    createList(brothList, brothCardContainer);
-    createList(proteinList, proteinCardContainer);
+    createList(brothList, brothCardContainer, "broth");
+    createList(proteinList, proteinCardContainer, "protein");
     fadeIn(mainText[1]);
     fadeIn(btnCenter);
 };

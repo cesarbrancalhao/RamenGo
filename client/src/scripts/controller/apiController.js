@@ -1,4 +1,5 @@
 import { API_KEY, API_URL } from '../config/config';
+import { getPlaceHolderByName } from '../config/placeholders';
 
 const getoptions = {
     method: 'GET',
@@ -21,15 +22,19 @@ const generateorderoptions = (brothId, proteinId) => {
     }),
 }};
 
-const throwError = (response) => {
-    throw new Error(response.status);
+const getPlaceholders = (name, b, p) => {
+    return getPlaceHolderByName(name, b, p);
 }
 
-const getFromApi = (path, options) => fetch(`${API_URL}/${path}`, options)
-    .then(response => response.ok ? response.json() : throwError(response))
-    .catch(error => console.error('Erro:', error));
+const throwError = (res) => {
+    throw new Error(res.status);
+}
+
+const getFromApi = (path, options, b = 0, p = 0) => fetch(`${API_URL}/${path}`, options)
+    .then(res => res.ok ? res.json() : throwError(res))
+    .catch(() => getPlaceholders(path, b, p));
 
 export const getBroths = () => getFromApi('broths', getoptions);
 export const getProteins = () => getFromApi('proteins', getoptions);
 export const getRecipes = () => getFromApi('recipes', getoptions);
-export const generateOrder = (brothId, proteinId) => getFromApi('orders', generateorderoptions(brothId, proteinId));
+export const generateOrder = (brothId, proteinId) => getFromApi('orders', generateorderoptions(brothId, proteinId), brothId, proteinId);

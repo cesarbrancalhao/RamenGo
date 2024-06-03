@@ -12,7 +12,7 @@ const generateModalHTML = (name, image) => `
             </div>
 
             <div class="center">
-                <img src="${image}" id="dish-img" alt="">
+                <img src="${image ? image : "./src/assets/dishes/nodish.png"}" id="dish-img" alt="">
             </div>
 
             <div>

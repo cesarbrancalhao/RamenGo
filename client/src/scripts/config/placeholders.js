@@ -1,6 +1,6 @@
 /* These are to be used if the server is down for some reason */
 
-export const proteins = [
+const proteins = [
     {
         "id": 1,
         "imageInactive": "https://tech.redventures.com.br/icons/pork/inactive.svg",
@@ -27,7 +27,7 @@ export const proteins = [
     }
 ];
 
-export const broths = [
+const broths = [
     {
         "id": 1,
         "imageInactive": "https://tech.redventures.com.br/icons/salt/inactive.svg",
@@ -54,59 +54,81 @@ export const broths = [
     }
 ];
 
-export const recipes = [
+const recipes = [
     {
-        "id": 1,
-        "name": "Salt and Chasu Ramen",
-        "description": "../../assets/dishes/chasu.png"
+        "id": Math.floor(Math.random() * 100000),
+        "description": "Salt and Chasu Ramen",
+        "image": "../../assets/dishes/chasu.png"
     },
     {
-        "id": 2,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Salt and Yasai Vegetarian Ramen",
         "image": "../../assets/dishes/yasai.png"
     },
     {
-        "id": 3,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Salt and Karaague Ramen",
         "image": "../../assets/dishes/karaague.png"
     },
     {
-        "id": 4,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Shoyu and Chasu Ramen",
         "image": "../../assets/dishes/chasu.png"
     },
     {
-        "id": 5,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Shoyu and Yasai Vegetarian Ramen",
         "image": "../../assets/dishes/yasai.png"
     },
     {
-        "id": 6,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Shoyu and Karaague Ramen",
         "image": "../../assets/dishes/karaague.png"
     },
     {
-        "id": 7,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Miso and Chasu Ramen",
         "image": "../../assets/dishes/chasu.png"
     },
     {
-        "id": 8,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Miso and Yasai Vegetarian Ramen",
         "image": "../../assets/dishes/yasai.png"
     },
     {
-        "id": 9,
+        "id": Math.floor(Math.random() * 100000),
         "description": "Miso and Karaague Ramen",
         "image": "../../assets/dishes/karaague.png"
+    },
+    {
+        "id": Math.floor(Math.random() * 100000)
     }
 ];
+const placeholders = {
+    proteins: { items: proteins },
+    broths: { items: broths },
+    recipes: { items: recipes }
+};
 
-export const findOrderRecipeId = (b, p) => {
+const findOrderRecipeId = (b, p) => {
+    if (b === "0" || p === "0") return recipes[9];
     const brothMap = {"1": 0, "2": 3, "3": 6};
     const proteinMap = {"1": 1, "2": 2, "3": 3};
     
     let responseId = String(parseInt(brothMap[b]) + proteinMap[p]);
 
-    return responseId;
+    return recipes[parseInt(responseId) - 1];
 };
+
+export const getPlaceHolderByName = (name, b = 0, p = 0) => {
+    switch (name) {
+        case "proteins":
+            return placeholders.proteins.items;
+        case "broths":
+            return placeholders.broths.items;
+        case "recipes":
+            return placeholders.recipes.items;
+        case "orders":
+            return findOrderRecipeId(b, p);
+    }
+}
