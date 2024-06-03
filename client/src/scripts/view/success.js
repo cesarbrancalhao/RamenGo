@@ -29,7 +29,7 @@ const generateModalHTML = (name, image) => `
                 <div class="center"><img class="success-text" src="./src/assets/icons/bowing-text.png" alt=""></div>
                 <div class="center"><h2>Your order is being prepared</h2></div>
                 <div class="center"><p>Hold on, when you least expect you will be eating your rámen.</p></div>
-                <div class="center"><a class="btn arrow" id="order">Place new order</a></div>
+                <div class="center"><a href="./index.html" class="btn arrow" id="order">Place new order</a></div>
             </div>
 
         </div>
