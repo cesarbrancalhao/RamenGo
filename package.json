@@ -15,7 +15,6 @@
   "author": "M. Cesar Brancalhão Filho",
   "license": "MIT",
   "dependencies": {
-    "clean-webpack-plugin": "^4.0.0",
     "dotenv-webpack": "^8.1.0",
     "scss": "^0.2.4",
     "webpack": "^5.91.0",
