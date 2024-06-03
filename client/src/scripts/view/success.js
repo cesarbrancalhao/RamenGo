@@ -1,4 +1,6 @@
 const modal = document.querySelector('.modal');
+const header = document.querySelector('#header');
+const main = document.querySelector('#main');
 
 const generateModalHTML = (name, image) => `
     <div class="modal-container">
@@ -34,13 +36,16 @@ const generateModalHTML = (name, image) => `
 
     </div>`;
 
-
 export const openModal = (name, image) => {
+    header.classList.add('hidden');
+    main.classList.add('hidden');
     modal.innerHTML = generateModalHTML(name, image);
     modal.classList.remove('hidden');
 }
 
 export const closeModal = () => {
+    header.classList.remove('hidden');
+    main.classList.remove('hidden');
     modal.classList.add('hidden');
     modal.innerHTML = '';
 }

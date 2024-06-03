@@ -269,7 +269,7 @@ html {
   align-items: center;
 }
 .modal .center img {
-  width: 650px;
+  width: 350px;
   margin-top: 50px;
 }
 @media (min-width: 1032px) {

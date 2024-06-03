@@ -1,5 +1,6 @@
 import { getBroths, getProteins } from "../controller/apiController";
-import { turnBtnActive } from "./button";
+import { requestOrder, turnBtnActive } from "./button";
+import { openModal } from "./success";
 
 const brothCardContainer = document.querySelector('#broth');
 const proteinCardContainer = document.querySelector('#protein');
@@ -22,7 +23,10 @@ const createList = (list, container) => {
             e.stopPropagation(); 
             selectCard(card, container); };
         card.addEventListener('click', () => turnBtnActive(document.querySelector('#order'), 
-            () => {}));
+            () => {
+                const {name, image} = requestOrder(/*brothid, proteinid*/);
+                openModal( name, image );
+            }));
         container.appendChild(card);
 
         fadeIn(card);
