@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800;900&display=swap" rel="stylesheet">
 
-    <script src="./src/scripts/view/header-animation.js"></script>
+    <script src="./src/scripts/view/header.js"></script>
 </head>
 <body>
-    <header class="header index">
+    <header id="header" class="header">
 
         <nav class="logo-container">
             <a href="./index.html"><img src="./src/assets/icons/logo-yellow.svg"  alt="Logo"></a>
@@ -35,7 +35,7 @@
 
     </header>
 
-    <main id="main" class="container index">
+    <main id="main" class="container">
 
         <div class="main-text">
             <h2>First things first: select your favorite broth.</h2>
@@ -57,7 +57,7 @@
 
     </main>
 
-    <div class="modal">
+    <div class="modal hidden">
     </div>
 
     <script src="./src/scripts/dist/main.js"></script>
