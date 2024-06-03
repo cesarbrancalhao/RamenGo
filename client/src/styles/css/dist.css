@@ -34,7 +34,8 @@
   color: var(--color-w);
   background: var(--color-1);
   border-radius: 50px;
-  font-weight: 800 0.9rem;
+  font-weight: 800;
+  font-size: 0.9rem;
   letter-spacing: 0.1rem;
   max-width: max-content;
   border: none;
@@ -49,7 +50,7 @@
   display: inline-block;
   width: 20px;
   height: 16px;
-  margin-left: 24px;
+  margin-left: 20px;
   background: url("../../assets/icons/active/active-arrow.svg");
   transition: transform 0.2s;
 }
@@ -190,6 +191,7 @@
 
 body {
   margin: 0;
+  z-index: 1;
   font-family: "M Plus Rounded 1c", sans-serif;
   background-color: var(--color-4);
 }
@@ -250,6 +252,79 @@ html {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 2;
+  background-color: var(--color-4);
+}
+.modal .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .center img {
+  width: 650px;
+  margin-top: 50px;
+}
+@media (min-width: 1032px) {
+  .modal-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.modal-header {
+  background-image: url("../../assets/patterns/pattern-azul.png");
+  height: 700px;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 50%;
+  position: relative;
+}
+.modal-header p {
+  text-align: center;
+  color: var(--color-w);
+  font-weight: 750;
+  font-size: 1.6rem;
+}
+.modal-header h2 {
+  text-align: center;
+  color: var(--color-3);
+  font-weight: 900;
+  font-size: 2rem;
+}
+.modal-main .message img.success-bowing {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 65px;
+}
+.modal-main .message img.success-text {
+  width: 328px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+@media (min-width: 1032px) {
+  .modal-main .message img.success-text {
+    width: 382px;
+  }
+}
+.modal-main .message h2 {
+  color: var(--color-2);
+  font-weight: 900;
+  font-size: 2rem;
+}
+.modal-main .message p {
+  margin: 10px 0 35px 0;
+}
+@media (min-width: 1032px) {
+  .modal-header, .modal-main {
+    height: 100vh;
+  }
 }
 
 @keyframes growImgHeader {
