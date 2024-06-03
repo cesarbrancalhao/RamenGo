@@ -1,11 +1,15 @@
 # RamenGo
 RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red Ventures'](https://redventures.com.br/) techincal test.
 
+### Check it live [here](https://ramengo-front.vercel.app/)!
+
 <div align="center">
     
-![Alt text](./client/src/assets/prints/print-header.png)
+![Alt text](./client/src/assets/prints/print-header.png?raw=true)
 
 </div>
+
+<br/>
 
 ## Table of Contents
 
@@ -25,8 +29,9 @@ npm i
 
 Create a .env file on the root folder and insert your x-api-key. Check [.env.example](./.env.example) for examples.
 
-*OBS: the client has placeholding objects to make sure it works if the server/connection is down, if you don't want this feature, you can go to [placeholders file](./client/src/scripts/config/placeholders.js) and comment/delete them.
-If you don't set an API_KEY on the .env file, it will use the placeholders by default*
+*OBS: the client has placeholding objects to make sure it works if the server/connection is down, if you don't want this feature, you can go to [placeholders file](./client/src/scripts/config/placeholders.js) and comment/delete them.*
+<br/>
+*If you don't set an API_KEY on the .env file, it will use the placeholders by default*
 
 Run the bundler.
 
@@ -62,7 +67,8 @@ You can use [http://localhost:8080](http://localhost:8080) in your API tool to t
 
 
 ### Cloud:
-Use [this endpoint](https://ramengo-back.onrender.com) to access the API.
+Use [https://ramengo-back.onrender.com](https://ramengo-back.onrender.com) to access the API. 
+<br/>
 WARNING: due to Render's nature, instances can spin down and delay requests by 50 seconds or more, in case you're experiencing timeouts, try again a minute or two later.
 
 ## <a name="stacks">Stacks</a>
@@ -92,4 +98,4 @@ WARNING: due to Render's nature, instances can spin down and delay requests by 5
 
 - **Database Abstraction Layer**: Utilizes GORM library for abstracting database operations and simplifying CRUD operations while offering powerful query capabilities and migrations.
 
-![Alt text](./client/src/assets/prints/print-main.png)
+![Alt text](./client/src/assets/prints/print-main.png?raw=true)
