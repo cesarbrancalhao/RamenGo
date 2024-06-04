@@ -212,6 +212,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.hidden {
+  display: none;
+}
+
+@keyframes growImgHeader {
+  from {
+    background-size: 0;
+  }
+  to {
+    background-size: 610px;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container {
   margin: 50px 0 40px 0;
 }
@@ -250,8 +270,21 @@ html {
   }
 }
 
-.hidden {
-  display: none;
+.loading {
+  border: 7px solid var(--color-4);
+  border-radius: 999px;
+  border-top: 7px solid var(--color-1);
+  margin: 70px auto 20px auto;
+  width: 50px;
+  height: 50px;
+  animation: loading 800ms linear infinite;
+}
+.loading-text {
+  font-size: 1rem;
+  color: var(--color-1);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
 }
 
 .modal {
@@ -265,7 +298,12 @@ html {
 }
 .modal .center #dish-img {
   width: 280px;
-  margin-top: 20%;
+  margin-top: 70px;
+}
+@media (min-width: 1032px) {
+  .modal .center #dish-img {
+    margin-top: 20%;
+  }
 }
 @media (min-width: 1032px) {
   .modal-container {
@@ -294,6 +332,11 @@ html {
   font-size: 2rem;
   margin: 0 10px;
 }
+@media (min-width: 1032px) {
+  .modal-header {
+    height: 100vh;
+  }
+}
 .modal-main .message .success-bowing {
   margin: 0;
   margin-bottom: 20px;
@@ -315,6 +358,11 @@ html {
   font-weight: 900;
   font-size: 2rem;
 }
+@media (max-width: 1032px) {
+  .modal-main .message h2 {
+    margin: 0 10px;
+  }
+}
 .modal-main .message p {
   text-align: center;
   margin: 10px 0 35px 0;
@@ -324,14 +372,14 @@ html {
     margin: 10px 10px 30px 10px;
   }
 }
+@media (min-width: 1032px) {
+  .modal-main .message {
+    margin-top: 300px;
+  }
+}
 @media (max-width: 1032px) {
   .modal-main {
     margin: 50px 0;
-  }
-}
-@media (min-width: 1032px) {
-  .modal-header, .modal-main {
-    height: 100vh;
   }
 }
 
@@ -343,6 +391,14 @@ html {
     background-size: 610px;
   }
 }
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .logo-container {
   display: flex;
   flex-wrap: wrap;
@@ -350,16 +406,28 @@ html {
   padding-left: 40px;
   width: 125px;
   height: 16px;
+  margin-bottom: -20px;
 }
 @media (max-width: 890px) {
   .logo-container {
     width: 150px;
     height: 19.2px;
     margin: 0 auto;
-    margin-bottom: -20px;
     padding-left: 0;
   }
   .logo-container img {
+    width: 150px;
+    height: 19.2px;
+  }
+}
+@media (max-width: 1031px) {
+  .logo-container.modal {
+    width: 150px;
+    height: 19.2px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .logo-container.modal img {
     width: 150px;
     height: 19.2px;
   }
@@ -379,23 +447,8 @@ html {
   background-size: 610px;
   position: relative;
   background-image: url("../../assets/images/ilustra.png");
-  height: 80%;
-}
-.header-image .header-arrow {
-  display: none;
-}
-.header-image .header-arrow img {
-  width: 50px;
-  height: 50px;
-}
-@media (max-width: 890px) {
-  .header-image .header-arrow {
-    display: block;
-    position: absolute;
-    bottom: 3.5%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  height: 100%;
+  margin-bottom: -70px;
 }
 @media (min-width: 891px) {
   .header-image {
@@ -406,14 +459,16 @@ html {
 }
 @media (max-width: 890px) {
   .header-image {
+    position: relative;
     background-image: url("../../assets/images/ilustra-mobile.png");
-    height: 100%;
-    background-size: 480px;
+    background-size: 380px;
+    height: 700px;
+    margin-bottom: -50px;
   }
 }
 @media (max-width: 680px) {
   .header-image {
-    background-size: 70%;
+    background-size: 350px;
   }
 }
 @media (max-width: 450px) {
@@ -438,10 +493,41 @@ html {
     display: none;
   }
 }
+.header-text-mobile {
+  display: none;
+}
+@media (max-width: 890px) {
+  .header-text-mobile {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 30ch;
+    word-wrap: break-word;
+    color: var(--color-w);
+    transform: translate(0px, 50px);
+  }
+}
+@media (max-width: 680px) {
+  .header-text-mobile {
+    margin: -10% auto;
+  }
+}
+@media (max-width: 450px) {
+  .header-text-mobile {
+    background-size: 80%;
+  }
+}
 .header p {
   font-weight: 520;
   font-size: 0.95rem;
   padding-bottom: 24px;
+}
+@media (max-width: 890px) {
+  .header p {
+    font-weight: 520;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 890px) {
   .header {

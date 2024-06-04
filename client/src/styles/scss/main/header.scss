@@ -7,17 +7,32 @@
     padding-left: 40px;
     width: 125px;
     height: 16px;
+    margin-bottom: -20px;
 
     @media (max-width: 890px) {
         width: 150px; // Upscaled 20%
         height: 19.2px;
         margin: 0 auto;
-        margin-bottom: -20px;
         padding-left: 0;
 
         img {
             width: 150px;
             height: 19.2px;
+        }
+    }
+
+    
+    @media (max-width: 1031px) {
+        &.modal {
+            width: 150px;
+            height: 19.2px;
+            margin: 0 auto;
+            padding-left: 0;
+
+            img {
+                width: 150px;
+                height: 19.2px;
+            }
         }
     }
 }
@@ -36,24 +51,8 @@
         background-size: 610px;
         position: relative;
         background-image: url("../../assets/images/ilustra.png");
-        height: 80%;
-
-        .header-arrow {
-            display: none;
-    
-            img {
-                width: 50px;
-                height: 50px;
-            }
-        
-            @media (max-width: 890px) {
-                display: block;
-                position: absolute;
-                bottom: 3.5%;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
+        height: 100%;
+        margin-bottom: -70px;
 
         @media (min-width: 891px) {
             animation-name: growImgHeader;
@@ -62,13 +61,15 @@
         }
 
         @media (max-width: 890px) {
+            position: relative;
             background-image: url("../../assets/images/ilustra-mobile.png");
-            height: 100%;
-            background-size: 480px;
+            background-size: 380px;
+            height: 700px;
+            margin-bottom: -50px;
         }
 
         @media (max-width: 680px) {
-            background-size: 70%;
+            background-size: 350px;
         }
 
         @media (max-width: 450px) {
@@ -93,10 +94,38 @@
         }
     }
 
+    &-text-mobile {
+        display: none;
+
+        @media (max-width: 890px) {
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 20px;
+            max-width: 30ch;
+            word-wrap: break-word;
+            color: var(--color-w);
+            transform: translate(0px, 50px);
+        }
+
+        @media (max-width: 680px) {
+            margin: -10% auto;
+        }
+
+        @media (max-width: 450px) {
+            background-size: 80%;
+        }
+    }
+
     p {
         font-weight: 520;
         font-size: 0.95rem;
         padding-bottom: 24px;
+
+        @media (max-width: 890px) {
+            font-weight: 520;
+            font-size: 1rem;
+        }
     }
 
     @media (max-width: 890px) {

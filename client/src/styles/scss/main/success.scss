@@ -9,7 +9,11 @@
 
         #dish-img {
             width: 280px;
-            margin-top: 20%;
+            margin-top: 70px;
+
+            @media (min-width: 1032px) {
+                margin-top: 20%;
+            }
         }
     }
 
@@ -42,11 +46,16 @@
             font-size: 2rem;
             margin: 0 10px;
         }
+
+        @media (min-width: 1032px) {
+            height: 100vh;
+        }
     }
 
     &-main {
         
         .message {
+
             .success-bowing {
                 margin: 0;
                 margin-bottom: 20px;
@@ -68,6 +77,10 @@
                 color: var(--color-2);
                 font-weight: 900;
                 font-size: 2rem;
+
+                @media (max-width: 1032px) {
+                    margin: 0 10px;
+                }
             }
 
             p {
@@ -79,18 +92,15 @@
                 }
 
             }
+
+            @media (min-width: 1032px) {
+                margin-top: 300px;
+            }
+
         }
 
         @media (max-width: 1032px) {
             margin: 50px 0;
-        }
-
-    }
-
-    &-header,
-    &-main {
-        @media (min-width: 1032px) {
-            height: 100vh;
         }
     }
 }
