@@ -103,6 +103,15 @@
 
     @media (max-width: 890px) {
         height: 100vh;
+        min-height: 760px;
+
+        @media (min-width: 451px) {
+            min-height: 800px;
+        }
+    
+        @media (min-width: 680px) {
+            min-height: 849px;
+        }
     }
 
     .header-mobile {

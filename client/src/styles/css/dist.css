@@ -194,6 +194,7 @@ body {
   z-index: 1;
   font-family: "M Plus Rounded 1c", sans-serif;
   background-color: var(--color-4);
+  min-width: 250px;
 }
 body h1,
 body h2,
@@ -503,6 +504,17 @@ html {
 @media (max-width: 890px) {
   .header {
     height: 100vh;
+    min-height: 760px;
+  }
+}
+@media (max-width: 890px) and (min-width: 451px) {
+  .header {
+    min-height: 800px;
+  }
+}
+@media (max-width: 890px) and (min-width: 680px) {
+  .header {
+    min-height: 849px;
   }
 }
 .header .header-mobile {
