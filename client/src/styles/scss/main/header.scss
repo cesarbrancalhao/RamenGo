@@ -61,19 +61,7 @@
         }
 
         @media (max-width: 890px) {
-            position: relative;
-            background-image: url("../../assets/images/ilustra-mobile.png");
-            background-size: 380px;
-            height: 700px;
-            margin-bottom: -50px;
-        }
-
-        @media (max-width: 680px) {
-            background-size: 350px;
-        }
-
-        @media (max-width: 450px) {
-            background-size: 80%;
+            display: none;
         }
     }
 
@@ -94,29 +82,6 @@
         }
     }
 
-    &-text-mobile {
-        display: none;
-
-        @media (max-width: 890px) {
-            display: flex;
-            text-align: center;
-            margin: 0 auto;
-            margin-top: 20px;
-            max-width: 30ch;
-            word-wrap: break-word;
-            color: var(--color-w);
-            transform: translate(0px, 50px);
-        }
-
-        @media (max-width: 680px) {
-            margin: -10% auto;
-        }
-
-        @media (max-width: 450px) {
-            background-size: 80%;
-        }
-    }
-
     p {
         font-weight: 520;
         font-size: 0.95rem;
@@ -126,9 +91,79 @@
             font-weight: 520;
             font-size: 1rem;
         }
+
+        @media (max-width: 680px) {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 0.85rem;
+        }
     }
 
     @media (max-width: 890px) {
         height: 100vh;
+    }
+
+    .header-mobile {
+        position: relative;
+        height: 100vh;
+        min-height: 760px;
+
+        @media (min-width: 451px) {
+            min-height: 800px;
+        }
+
+        @media (min-width: 680px) {
+            min-height: 849px;
+        }
+
+        @media (min-width: 891px) {
+            display: none;
+        }
+    
+        .header-text-mobile, .header-image-mobile {
+            position: absolute;
+        }
+
+        .header-text-mobile {
+            text-align: center;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+            margin: 0 auto;
+            max-width: 30ch;
+            word-wrap: break-word;
+            color: var(--color-w);
+
+            @media (max-width: 680px) {
+                background-size: 280px;
+            }
+
+            @media (max-width: 450px) {
+                background-size: 230px;
+            }
+        }
+
+        .header-image-mobile {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("../../assets/images/ilustra-mobile.png");
+
+            @media (max-width: 890px) {
+                position: relative;
+                background-size: 330px;
+                height: 700px;
+                margin-bottom: -50px;
+            }
+    
+            @media (max-width: 680px) {
+                background-size: 280px;
+            }
+    
+            @media (max-width: 450px) {
+                background-size: 230px;
+            }
+        }
     }
 }

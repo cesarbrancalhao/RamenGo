@@ -459,21 +459,7 @@ html {
 }
 @media (max-width: 890px) {
   .header-image {
-    position: relative;
-    background-image: url("../../assets/images/ilustra-mobile.png");
-    background-size: 380px;
-    height: 700px;
-    margin-bottom: -50px;
-  }
-}
-@media (max-width: 680px) {
-  .header-image {
-    background-size: 350px;
-  }
-}
-@media (max-width: 450px) {
-  .header-image {
-    background-size: 80%;
+    display: none;
   }
 }
 .header-text {
@@ -493,31 +479,6 @@ html {
     display: none;
   }
 }
-.header-text-mobile {
-  display: none;
-}
-@media (max-width: 890px) {
-  .header-text-mobile {
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 20px;
-    max-width: 30ch;
-    word-wrap: break-word;
-    color: var(--color-w);
-    transform: translate(0px, 50px);
-  }
-}
-@media (max-width: 680px) {
-  .header-text-mobile {
-    margin: -10% auto;
-  }
-}
-@media (max-width: 450px) {
-  .header-text-mobile {
-    background-size: 80%;
-  }
-}
 .header p {
   font-weight: 520;
   font-size: 0.95rem;
@@ -529,9 +490,85 @@ html {
     font-size: 1rem;
   }
 }
+@media (max-width: 680px) {
+  .header p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 450px) {
+  .header p {
+    font-size: 0.85rem;
+  }
+}
 @media (max-width: 890px) {
   .header {
     height: 100vh;
+  }
+}
+.header .header-mobile {
+  position: relative;
+  height: 100vh;
+  min-height: 760px;
+}
+@media (min-width: 451px) {
+  .header .header-mobile {
+    min-height: 800px;
+  }
+}
+@media (min-width: 680px) {
+  .header .header-mobile {
+    min-height: 849px;
+  }
+}
+@media (min-width: 891px) {
+  .header .header-mobile {
+    display: none;
+  }
+}
+.header .header-mobile .header-text-mobile, .header .header-mobile .header-image-mobile {
+  position: absolute;
+}
+.header .header-mobile .header-text-mobile {
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: 0 auto;
+  max-width: 30ch;
+  word-wrap: break-word;
+  color: var(--color-w);
+}
+@media (max-width: 680px) {
+  .header .header-mobile .header-text-mobile {
+    background-size: 280px;
+  }
+}
+@media (max-width: 450px) {
+  .header .header-mobile .header-text-mobile {
+    background-size: 230px;
+  }
+}
+.header .header-mobile .header-image-mobile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/ilustra-mobile.png");
+}
+@media (max-width: 890px) {
+  .header .header-mobile .header-image-mobile {
+    position: relative;
+    background-size: 330px;
+    height: 700px;
+    margin-bottom: -50px;
+  }
+}
+@media (max-width: 680px) {
+  .header .header-mobile .header-image-mobile {
+    background-size: 280px;
+  }
+}
+@media (max-width: 450px) {
+  .header .header-mobile .header-image-mobile {
+    background-size: 230px;
   }
 }
 
