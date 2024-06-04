@@ -68,8 +68,10 @@ You can use [http://localhost:8080](http://localhost:8080) in your API tool to t
 
 ### Cloud:
 Use [https://ramengo-back.onrender.com](https://ramengo-back.onrender.com) to access the API. 
-<br/>
-WARNING: due to Render's nature, instances can spin down and delay requests by 50 seconds or more, in case you're experiencing timeouts, try again a minute or two later.
+<br/><br/>
+**WARNING**: Due to Render's nature, instances can spin down and delay requests by 50 seconds or more, in case you're experiencing timeouts, try again a minute or two later.
+<br/><br/>
+*Note: Some functionalities are intentionally disabled for safety purposes. Use the software on localhost to access all features*
 
 ## <a name="stacks">Stacks</a>
 
