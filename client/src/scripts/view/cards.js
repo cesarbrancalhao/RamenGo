@@ -70,10 +70,13 @@ const selectCard = (card, container) => {
         turnActive(card, container);
 };
 
+const removeLoader = () => document.querySelector('.loading-container').classList.add('hidden');
+
 export async function fillCards() {
     const brothList = await getBroths();
     const proteinList = await getProteins();
 
+    removeLoader();
     fadeIn(mainText[0]);
     createList(brothList, brothCardContainer, "broth");
     createList(proteinList, proteinCardContainer, "protein");

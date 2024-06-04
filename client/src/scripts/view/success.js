@@ -22,7 +22,7 @@ const generateModalHTML = (name, image) => `
 
         </div>
 
-        <div class="modal-main center">
+        <div class="modal-main">
 
             <div class="message">
                 <div class="center"><img class="success-bowing" src="./src/assets/icons/bowing.svg" alt=""></div>
