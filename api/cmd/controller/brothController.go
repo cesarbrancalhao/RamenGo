@@ -3,7 +3,6 @@ package controller
 import (
 	"api/internal/models"
 	"api/internal/repository"
-	"errors"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
