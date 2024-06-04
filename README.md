@@ -119,7 +119,7 @@ Use [https://ramengo-back.onrender.com](https://ramengo-back.onrender.com) to ac
 
 - **Environment Configuration**: Supports environment-specific configurations through environmental variables, allowing for flexible deployment across different environments without hardcoding sensitive information.
 
-- **Continuous Integration/Deployment**: Sets up CI/CD pipelines using GitHub and Render, automating the build, test, and deployment processes for faster and safer releases.
+- **Continuous Integration/Deployment**: Set up CI/CD pipelines using GitHub, Vercel and Render, automating the build, test, and deployment processes for faster and safer releases.
 
 - **Database Abstraction Layer**: Utilizes GORM library for abstracting database operations and simplifying CRUD operations while offering powerful query capabilities and migrations.
 
