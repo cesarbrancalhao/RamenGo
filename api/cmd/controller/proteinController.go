@@ -21,15 +21,14 @@ func GetProteins(c *gin.Context) {
 	c.JSON(http.StatusOK, res)
 }
 
-// For this is a techincal test project, I wont support the below methods, I still built them for showcase purposes
+// For this is a technical test project, I wont support the below methods on the deployed API, I built them for showcase purposes
 func CreateProtein(c *gin.Context) {
 	var protein *models.Protein
 	if err := c.ShouldBindJSON(&protein); err != nil {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}	
-	// err := repository.CreateProtein(protein)
-	err := errors.New("service unavailable")
+	err := repository.CreateProtein(protein)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
@@ -43,8 +42,7 @@ func UpdateProtein(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}	
-	// err := repository.UpdateProtein(protein)
-	err := errors.New("service unavailable")
+	err := repository.UpdateProtein(protein)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
@@ -58,8 +56,7 @@ func DeleteProtein(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, models.ErrorResponse{Error: err.Error()})
 		return
 	}	
-	// err := repository.DeleteProtein(protein)
-	err := errors.New("service unavailable")
+	err := repository.DeleteProtein(protein)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, models.ErrorResponse{Error: err.Error()})
 		return
