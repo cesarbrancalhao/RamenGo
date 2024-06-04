@@ -56,7 +56,7 @@ After the initialization, migrate the models (this will insert the data too, cha
 npm run migrate
 ```
 
-Create a .env file **IN THE API FOLDER** and insert your x-api-key. Check [.env.example](./api/.env.example) for examples.
+Create a .env file **IN THE API FOLDER** and insert your x-api-key. Check [.env.api](./api/.env.example) for examples.
 Run the development server:
 
 ```sh
