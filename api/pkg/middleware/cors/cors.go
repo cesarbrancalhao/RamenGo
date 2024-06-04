@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func Cors(c *gin.Context) {
@@ -26,9 +27,9 @@ func Cors(c *gin.Context) {
         return
     }
 
-	if c.Request.Header[apiKeyHeader][0] != os.Getenv("API_KEY") { // This will be the only authentication process in this project, as I have limited time
-		c.AbortWithStatusJSON(http.StatusUnauthorized, models.ErrorResponse{Error: "Invalid API key"})
-		return
+	if bcrypt.CompareHashAndPassword([]byte(c.Request.Header[apiKeyHeader][0]), []byte(os.Getenv("API_KEY"))) != nil {
+        c.AbortWithStatusJSON(http.StatusUnauthorized, models.ErrorResponse{Error: "Invalid API key"})
+        return
 	}
 
     c.Next()
