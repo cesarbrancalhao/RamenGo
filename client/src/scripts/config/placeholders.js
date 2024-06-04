@@ -72,21 +72,6 @@ const recipes = [
     },
     {
         "id": Math.floor(Math.random() * 100000),
-        "description": "Shoyu and Chasu Ramen",
-        "image": "./src/assets/dishes/chasu.png"
-    },
-    {
-        "id": Math.floor(Math.random() * 100000),
-        "description": "Shoyu and Yasai Vegetarian Ramen",
-        "image": "./src/assets/dishes/yasai.png"
-    },
-    {
-        "id": Math.floor(Math.random() * 100000),
-        "description": "Shoyu and Karaague Ramen",
-        "image": "./src/assets/dishes/karaague.png"
-    },
-    {
-        "id": Math.floor(Math.random() * 100000),
         "description": "Miso and Chasu Ramen",
         "image": "./src/assets/dishes/chasu.png"
     },
@@ -98,6 +83,21 @@ const recipes = [
     {
         "id": Math.floor(Math.random() * 100000),
         "description": "Miso and Karaague Ramen",
+        "image": "./src/assets/dishes/karaague.png"
+    },
+    {
+        "id": Math.floor(Math.random() * 100000),
+        "description": "Shoyu and Chasu Ramen",
+        "image": "./src/assets/dishes/chasu.png"
+    },
+    {
+        "id": Math.floor(Math.random() * 100000),
+        "description": "Shoyu and Yasai Vegetarian Ramen",
+        "image": "./src/assets/dishes/yasai.png"
+    },
+    {
+        "id": Math.floor(Math.random() * 100000),
+        "description": "Shoyu and Karaague Ramen",
         "image": "./src/assets/dishes/karaague.png"
     },
     {
