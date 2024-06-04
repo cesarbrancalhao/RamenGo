@@ -16,11 +16,16 @@ RamenGo is a food app built in [Gin](https://github.com/gin-gonic/gin) for [Red 
 1. [Getting Started](#start)
     - Client
     - Api
+    - Cloud
 2. [Tech Stacks](#stacks)
 3. [Features](#features)
 
 ## <a name="start">Getting Started</a>
 ### Client:
+
+<details>
+<summary> How to run client </summary>
+    
 Install NPM packages.
 
 ```sh
@@ -42,8 +47,19 @@ npm run webpack
 
 I kept the Sass dist file for ease of use but you can start it with ```npm run sass```
 
+</details>
+
 ### API:
 
+<details>
+<summary> How set up API </summary>
+
+Install NPM packages.
+
+```sh
+npm i
+```
+    
 Set up your docker container (you need to have Docker Desktop instlled).
 
 ```sh
@@ -65,13 +81,20 @@ npm run api
 
 You can use [http://localhost:8080](http://localhost:8080) in your API tool to test the API locally.
 
+</details>
 
 ### Cloud:
+
+<details>
+<summary> How use the webservice</summary>
+
 Use [https://ramengo-back.onrender.com](https://ramengo-back.onrender.com) to access the API. 
 <br/><br/>
 **WARNING**: Due to Render's nature, instances can spin down and delay requests by 50 seconds or more, in case you're experiencing timeouts, try again a minute or two later.
 <br/><br/>
 *Note: Some functionalities are intentionally disabled for safety purposes. Use the software on localhost to access all features*
+
+</details>
 
 ## <a name="stacks">Stacks</a>
 
@@ -99,5 +122,7 @@ Use [https://ramengo-back.onrender.com](https://ramengo-back.onrender.com) to ac
 - **Continuous Integration/Deployment**: Sets up CI/CD pipelines using GitHub and Render, automating the build, test, and deployment processes for faster and safer releases.
 
 - **Database Abstraction Layer**: Utilizes GORM library for abstracting database operations and simplifying CRUD operations while offering powerful query capabilities and migrations.
+
+<br/>
 
 ![Alt text](./client/src/assets/prints/print-main.png?raw=true)
