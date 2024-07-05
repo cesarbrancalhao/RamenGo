@@ -30,9 +30,25 @@ const throwError = (res) => {
     throw new Error(res.status);
 }
 
-const getFromApi = (path, options, b = 0, p = 0) => fetch(`${API_URL}/${path}`, options)
-    .then(res => res.ok ? res.json() : throwError(res))
-    .catch(() => getPlaceholders(path, b, p));
+const getFromApi = async (path, options, b = 0, p = 0) => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+    try {
+        
+        const res = await fetch(`${API_URL}/${path}`, { ...options, signal: controller.signal });
+
+        clearTimeout(timeoutId);
+
+        if (!res.ok) throwError(res.status);
+
+        return response.json();
+
+    } catch (error) {
+
+        return getPlaceholders(path, b, p);
+    }
+};
 
 export const getBroths = () => getFromApi('broths', getoptions);
 export const getProteins = () => getFromApi('proteins', getoptions);
